@@ -1,0 +1,148 @@
+/* custome style (Bootstrap override) */
+
+
+/* Theme colour variables */
+:root{
+  --bg: #323645;
+  --surface: #12141a;
+  --surface-2: #161a22;
+  --subtext: #f7f7f7;
+  --text: #ffffff;
+  --muted: #a7adb7;
+  --gold: #c8a24a;   
+  --border: #242a36;
+}
+
+/* Base page styling */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Page Containers */
+.page-wrap {
+  min-height: 100vh;
+}
+
+/* Default font */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Links */
+a, .gold-link {
+  color: var(--gold);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Cards  styling*/
+.card.custom-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.card.custom-card .card-header {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* Muted text */
+.grey-text {
+  color: var(--muted) !important;
+}
+
+
+
+/* Form Inputs, overriding Bootstrap’s default style */
+.form-control, .form-select {
+  background: #0f1218;
+  border: 1px solid var(--border);
+  color: var(--subtext);
+}
+.form-control:focus, .form-select:focus {
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 0.2rem rgba(200, 162, 74, 0.15);
+}
+
+
+
+/* Primary action button */
+.btn-primary {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: #111;
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+   background: var(--muted);
+   color: var(--surface);
+   font-weight: 600;
+    border: 1px solid var(--subtext);
+}
+
+
+/* Secondary Buttons */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: rgb(36, 8, 8);
+  border-color: var(--surface);
+  color: var(--text);
+  box-shadow: 0 0 0 0.15rem rgb(141, 146, 7);
+}
+
+
+/* Semi-bold text helper */
+.custom-semibold {
+  font-weight: 600 !important;
+  color: var(--subtext) !important;   
+}
+
+/* List items */
+.list-group-item.custom-list{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.alert.error-alert{
+  background: rgb(84, 48, 48);
+  border: 2px solid rgba(161, 0, 0);
+  color: var(--text);
+
+}
+
+
+/* Section headings */
+.section-title{
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Subtitles and secondary text */
+.text-subtitle{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+/* Pill labels (counts, metadata) */
+.total-count-badge{
+  border: 1px solid var(--border);
+  background: #0f1218;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
